@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="Tables.TableEditController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox layoutX="60.0" layoutY="60.0" prefHeight="43.0" prefWidth="550.0" spacing="30.0">
+               <children>
+                  <Label text="Item">
+                     <HBox.margin>
+                        <Insets left="20.0" top="7.5"/>
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="itemField">
+                     <HBox.margin>
+                        <Insets left="50.0"/>
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0"/>
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="43.0" prefWidth="550.0" spacing="30.0">
+               <children>
+                  <Label text="Market">
+                     <HBox.margin>
+                        <Insets left="20.0" top="7.5"/>
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="marketField">
+                     <HBox.margin>
+                        <Insets left="35.0"/>
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="43.0" prefWidth="550.0" spacing="30.0">
+               <children>
+                  <Label text="Price">
+                     <HBox.margin>
+                        <Insets left="20.0" top="7.5"/>
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="priceField">
+                     <HBox.margin>
+                        <Insets left="47.0"/>
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="43.0" prefWidth="550.0" spacing="30.0">
+               <children>
+                  <Label text="Cost">
+                     <HBox.margin>
+                        <Insets top="7.5"/>
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="costField">
+                     <HBox.margin>
+                        <Insets left="55.0"/>
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="15.0"/>
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="43.0" prefWidth="550.0" spacing="30.0">
+               <children>
+                  <Label text="Commission">
+                     <HBox.margin>
+                        <Insets left="20.0" top="7.5"/>
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="commissionField"/>
+               </children>
+            </HBox>
+            <HBox prefHeight="43.0" prefWidth="550.0" spacing="30.0">
+               <children>
+                  <Label text="Date">
+                     <HBox.margin>
+                        <Insets left="20.0" top="7.5"/>
+                     </HBox.margin>
+                  </Label>
+                  <DatePicker fx:id="dateField">
+                     <HBox.margin>
+                        <Insets left="47.0"/>
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+            <HBox prefHeight="43.0" prefWidth="550.0" spacing="30.0">
+               <children>
+                  <Button fx:id="cancel" mnemonicParsing="false" onAction="#discard" text="Cancel">
+                     <font>
+                        <Font size="11.0"/>
+                     </font>
+                     <HBox.margin>
+                        <Insets left="400.0"/>
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#editTable" text="Edit">
+                     <font>
+                        <Font size="11.0"/>
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

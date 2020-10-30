@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/11.0.1"
+            fx:controller="RecordsPackage.Controller">
+    <children>
+        <BorderPane prefHeight="1080.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <MenuBar BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About"/>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+            <left>
+                <VBox fx:id="vboxm" prefHeight="200.0" prefWidth="240.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox fx:id="hboxt" prefHeight="41.0" prefWidth="200.0">
+                            <children>
+                                <Label text="OPERATIONS">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" left="70.0" top="10.0"/>
+                                    </HBox.margin>
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <TitledPane animated="false" prefHeight="437.0" prefWidth="240.0" text="INSERT/EDIT">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="365.0" prefWidth="238.0">
+                                    <children>
+                                        <VBox fx:id="vbox1" prefHeight="403.0" prefWidth="241.0">
+                                            <children>
+                                                <HBox prefHeight="55.0" prefWidth="241.0" spacing="10.0">
+                                                    <children>
+                                                        <ComboBox fx:id="Markets" onAction="#setSelectedMarket"
+                                                                  prefHeight="24.0" prefWidth="239.0"
+                                                                  promptText="MARKET"/>
+                                                    </children>
+                                                </HBox>
+                                                <HBox fx:id="hbox2" prefHeight="178.0" prefWidth="241.0" spacing="10.0">
+                                                    <children>
+                                                        <ComboBox fx:id="size" onAction="#checkSize" prefHeight="26.0"
+                                                                  prefWidth="90.0" promptText="Size"/>
+                                                        <ComboBox fx:id="Items" onAction="#getSelectedItem"
+                                                                  prefHeight="26.0" prefWidth="131.0"
+                                                                  promptText="ITEM"/>
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="39.0" prefWidth="241.0" spacing="10.0">
+                                                    <children>
+                                                        <Label prefHeight="15.0" prefWidth="37.0" text="Date">
+                                                            <HBox.margin>
+                                                                <Insets bottom="10.0" top="15.0"/>
+                                                            </HBox.margin>
+                                                            <font>
+                                                                <Font size="12.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <DatePicker fx:id="datePicker" prefHeight="26.0"
+                                                                    prefWidth="194.0">
+                                                            <HBox.margin>
+                                                                <Insets bottom="10.0" left="10.0" top="10.0"/>
+                                                            </HBox.margin>
+                                                        </DatePicker>
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="39.0" prefWidth="241.0" spacing="30.0">
+                                                    <children>
+                                                        <Button mnemonicParsing="false" onAction="#discard"
+                                                                text="Cancel">
+                                                            <HBox.margin>
+                                                                <Insets left="20.0" top="10.0"/>
+                                                            </HBox.margin>
+                                                            <font>
+                                                                <Font size="11.0"/>
+                                                            </font>
+                                                        </Button>
+                                                        <Button mnemonicParsing="false" onAction="#insert" text="Enter">
+                                                            <HBox.margin>
+                                                                <Insets left="30.0" top="10.0"/>
+                                                            </HBox.margin>
+                                                            <font>
+                                                                <Font size="11.0"/>
+                                                            </font>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </TitledPane>
+                        <TitledPane animated="false" text="SORT BY">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="259.0" prefWidth="238.0">
+                                    <children>
+                                        <VBox fx:id="vbox3" prefHeight="259.0" prefWidth="240.0" spacing="15.0">
+                                            <children>
+                                                <CheckBox mnemonicParsing="false" text="ITEM">
+                                                    <VBox.margin>
+                                                        <Insets top="10.0"/>
+                                                    </VBox.margin>
+                                                </CheckBox>
+                                                <CheckBox mnemonicParsing="false" text="MARKET"/>
+                                                <CheckBox mnemonicParsing="false" text="MONTH"/>
+                                                <CheckBox mnemonicParsing="false" text="DAY"/>
+                                                <CheckBox mnemonicParsing="false" text="DEFAULT"/>
+                                            </children>
+                                            <padding>
+                                                <Insets left="15.0"/>
+                                            </padding>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                            <VBox.margin>
+                                <Insets/>
+                            </VBox.margin>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="181.0" prefWidth="240.0" text="STATISTICS">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="137.0" prefWidth="238.0">
+                                    <children>
+                                        <VBox fx:id="vbox4" layoutY="-6.0" prefHeight="191.0" prefWidth="238.0">
+                                            <children>
+                                                <HBox prefHeight="55.0" prefWidth="238.0" spacing="20.0">
+                                                    <children>
+                                                        <RadioButton mnemonicParsing="false" text="WEEKLY">
+                                                            <HBox.margin>
+                                                                <Insets left="15.0" top="15.0"/>
+                                                            </HBox.margin>
+                                                            <toggleGroup>
+                                                                <ToggleGroup fx:id="TIMELINE"/>
+                                                            </toggleGroup>
+                                                        </RadioButton>
+                                                        <RadioButton mnemonicParsing="false" text="MONTHLY"
+                                                                     toggleGroup="$TIMELINE">
+                                                            <HBox.margin>
+                                                                <Insets top="15.0"/>
+                                                            </HBox.margin>
+                                                        </RadioButton>
+                                                    </children>
+                                                    <VBox.margin>
+                                                        <Insets top="30.0"/>
+                                                    </VBox.margin>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                            <VBox.margin>
+                                <Insets/>
+                            </VBox.margin>
+                        </TitledPane>
+                    </children>
+                </VBox>
+            </left>
+            <center>
+                <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox prefHeight="41.0" prefWidth="1689.0">
+                            <children>
+                                <Label prefHeight="21.0" prefWidth="68.0" text="SALES:">
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" left="250.0" top="10.0"/>
+                                    </HBox.margin>
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label prefHeight="21.0" prefWidth="68.0" text="ALL">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" left="100.0" top="10.0"/>
+                                    </HBox.margin>
+                                </Label>
+                                <Label prefHeight="21.0" prefWidth="68.0" text="DAY">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                    <HBox.margin>
+                                        <Insets bottom="10.0" left="70.0" top="10.0"/>
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <TableView fx:id="Database" prefHeight="596.0" prefWidth="1680.0">
+                            <columns>
+                                <TableColumn fx:id="ITEM" prefWidth="200.0" text="ITEM"/>
+                                <TableColumn fx:id="MARKET" prefWidth="110.0" text="MARKET"/>
+                                <TableColumn fx:id="PRICE" minWidth="7.0" prefWidth="110.0" text="PRICE"/>
+                                <TableColumn fx:id="COST" prefWidth="110.0" text="COST"/>
+                                <TableColumn fx:id="COMMISSION" prefWidth="110.0" text="COMMISSION"/>
+                                <TableColumn fx:id="DATE" prefWidth="175.0" text="DATE"/>
+                                <TableColumn fx:id="MONTH" prefWidth="175.0" text="MONTH"/>
+                                <TableColumn fx:id="CUMULATIVE" prefWidth="110.0" text="CUMULATIVE"/>
+                            </columns>
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="3.0" top="10.0"/>
+                            </HBox.margin>
+                        </TableView>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

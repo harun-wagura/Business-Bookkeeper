@@ -1,0 +1,17 @@
+
+.root {
+    -fx-background-color: black;
+}
+
+.label {
+    -fx-text-fill: red;
+}
+
+.button {
+    -fx-background-color: red;
+    -fx-text-fill: black;
+}
+
+.text-field {
+    -fx-text-fill: green;
+}

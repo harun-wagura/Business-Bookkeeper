@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="base.Controller">
+    <children>
+        <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <MenuBar fx:id="menubar" BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#setNewStage" text="New">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP"
+                                                            shortcut="UP"/>
+                                    </accelerator>
+                                </MenuItem>
+                                <MenuItem mnemonicParsing="false" onAction="#save" text="Save">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP"
+                                                            shortcut="UP"/>
+                                    </accelerator>
+                                </MenuItem>
+                                <MenuItem fx:id="close" mnemonicParsing="false" onAction="#exitStage" text="Close">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="DOWN" code="F4" control="UP" meta="UP" shift="UP"
+                                                            shortcut="UP"/>
+                                    </accelerator>
+                                </MenuItem>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Tools">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Calculator">
+                                    <accelerator>
+                                        <KeyCodeCombination alt="UP" code="F6" control="DOWN" meta="UP" shift="UP"
+                                                            shortcut="UP"/>
+                                    </accelerator>
+                                </MenuItem>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="View">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Theme"/>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+            <left>
+                <AnchorPane fx:id="pane1" prefHeight="200.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <SplitPane fx:id="splitPane1" dividerPositions="0.899641577060932" orientation="VERTICAL"
+                                   prefHeight="371.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <AnchorPane fx:id="anchorPane1" minHeight="0.0" minWidth="0.0" prefHeight="100.0"
+                                            prefWidth="160.0">
+                                    <children>
+                                        <TitledPane fx:id="TPane1" animated="false" prefHeight="257.0" prefWidth="198.0"
+                                                    text="Items" AnchorPane.bottomAnchor="0.0"
+                                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                    AnchorPane.topAnchor="0.0">
+                                            <content>
+                                                <AnchorPane fx:id="anchorPane2" minHeight="0.0" minWidth="0.0"
+                                                            prefHeight="491.0" prefWidth="250.0">
+                                                    <children>
+                                                        <ListView fx:id="items" layoutX="14.4" layoutY="20.4"
+                                                                  prefHeight="516.0" prefWidth="246.0"
+                                                                  AnchorPane.bottomAnchor="0.0"
+                                                                  AnchorPane.leftAnchor="0.0"
+                                                                  AnchorPane.rightAnchor="0.0"
+                                                                  AnchorPane.topAnchor="0.0"/>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="anchorPane3" minHeight="0.0" minWidth="0.0" prefHeight="100.0"
+                                            prefWidth="160.0">
+                                    <children>
+                                        <TitledPane animated="false" prefHeight="104.0" prefWidth="248.0"
+                                                    text="Item Actions" AnchorPane.bottomAnchor="0.0"
+                                                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                    AnchorPane.topAnchor="0.0">
+                                            <content>
+                                                <AnchorPane fx:id="APane1" minHeight="0.0" minWidth="0.0"
+                                                            prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <HBox prefHeight="71.0" prefWidth="246.0" spacing="10.0"
+                                                              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                                              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                                                            <children>
+                                                                <Button mnemonicParsing="false" onAction="#setCenterAdd"
+                                                                        text="Add">
+                                                                    <font>
+                                                                        <Font size="11.0"/>
+                                                                    </font>
+                                                                </Button>
+                                                                <Button mnemonicParsing="false"
+                                                                        onAction="#setCenterView" text="View">
+                                                                    <font>
+                                                                        <Font size="11.0"/>
+                                                                    </font>
+                                                                </Button>
+                                                                <Button mnemonicParsing="false"
+                                                                        onAction="#setCenterEdit" text="Edit">
+                                                                    <font>
+                                                                        <Font size="11.0"/>
+                                                                    </font>
+                                                                </Button>
+                                                                <Button mnemonicParsing="false" onAction="#Delete"
+                                                                        text="Delete">
+                                                                    <font>
+                                                                        <Font size="11.0"/>
+                                                                    </font>
+                                                                </Button>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </left>
+            <right>
+                <AnchorPane BorderPane.alignment="CENTER">
+                    <children>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="855.0" prefWidth="248.0">
+                            <children>
+                                <VBox layoutY="-4.0" prefHeight="859.0" prefWidth="248.0" spacing="10.0"
+                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-4.0">
+                                    <children>
+                                        <TitledPane animated="false" prefHeight="207.0" prefWidth="248.0"
+                                                    text="Markets">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                                            prefWidth="200.0">
+                                                    <children>
+                                                        <ListView fx:id="markets" layoutY="25.4" prefHeight="158.0"
+                                                                  prefWidth="248.0" AnchorPane.topAnchor="15.0">
+                                                            <padding>
+                                                                <Insets top="10.0"/>
+                                                            </padding>
+                                                        </ListView>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                            <VBox.margin>
+                                                <Insets top="120.0"/>
+                                            </VBox.margin>
+                                        </TitledPane>
+                                        <TitledPane animated="false" text="Home Actions">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="331.0"
+                                                            prefWidth="246.0">
+                                                    <children>
+                                                        <VBox prefHeight="331.0" prefWidth="246.0"
+                                                              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                                              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <HBox prefHeight="42.0" prefWidth="226.0"
+                                                                      spacing="15.0">
+                                                                    <children>
+                                                                        <Button mnemonicParsing="false"
+                                                                                onAction="#setHomeScene" text="Home">
+                                                                            <HBox.margin>
+                                                                                <Insets bottom="5.0" left="5.0"
+                                                                                        top="5.0"/>
+                                                                            </HBox.margin>
+                                                                            <font>
+                                                                                <Font size="11.0"/>
+                                                                            </font>
+                                                                        </Button>
+                                                                        <Button mnemonicParsing="false"
+                                                                                onAction="#setChart" text="Chart">
+                                                                            <HBox.margin>
+                                                                                <Insets bottom="5.0" left="5.0"
+                                                                                        top="5.0"/>
+                                                                            </HBox.margin>
+                                                                            <font>
+                                                                                <Font size="11.0"/>
+                                                                            </font>
+                                                                        </Button>
+                                                                        <Button mnemonicParsing="false"
+                                                                                onAction="#setImage" text="Change">
+                                                                            <font>
+                                                                                <Font size="11.0"/>
+                                                                            </font>
+                                                                            <HBox.margin>
+                                                                                <Insets bottom="5.0" left="5.0"
+                                                                                        top="5.0"/>
+                                                                            </HBox.margin>
+                                                                        </Button>
+                                                                    </children>
+                                                                </HBox>
+                                                                <HBox prefHeight="49.0" prefWidth="226.0">
+                                                                    <children>
+                                                                        <ComboBox fx:id="background" prefHeight="26.0"
+                                                                                  prefWidth="236.0"
+                                                                                  promptText="Select Background"/>
+                                                                    </children>
+                                                                </HBox>
+                                                                <HBox prefHeight="49.0" prefWidth="226.0">
+                                                                    <children>
+                                                                        <ComboBox fx:id="background1"
+                                                                                  onAction="#chooseCalculator"
+                                                                                  prefHeight="26.0" prefWidth="236.0"
+                                                                                  promptText="Select Calculator">
+                                                                            <HBox.margin>
+                                                                                <Insets top="10.0"/>
+                                                                            </HBox.margin>
+                                                                        </ComboBox>
+                                                                    </children>
+                                                                </HBox>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </TitledPane>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            </right>
+            <bottom>
+                <AnchorPane fx:id="Bottom_ovr" prefHeight="69.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <SplitPane dividerPositions="0.5, 0.5" prefHeight="160.0" prefWidth="600.0"
+                                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <AnchorPane fx:id="bottom1" minHeight="0.0" minWidth="0.0" prefHeight="160.0"
+                                            prefWidth="100.0">
+                                    <children>
+                                        <VBox layoutY="-66.0" prefHeight="67.0" prefWidth="295.0"
+                                              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <HBox>
+                                                    <children>
+                                                        <RadioButton fx:id="Custom" mnemonicParsing="false"
+                                                                     onAction="#getSelectedRadio" text="Custom">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" top="10.0"/>
+                                                            </HBox.margin>
+                                                            <toggleGroup>
+                                                                <ToggleGroup fx:id="Markets"/>
+                                                            </toggleGroup>
+                                                        </RadioButton>
+                                                        <RadioButton fx:id="Jumia" mnemonicParsing="false"
+                                                                     onAction="#getSelectedRadio" text="Jumia"
+                                                                     toggleGroup="$Markets">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" top="10.0"/>
+                                                            </HBox.margin>
+                                                        </RadioButton>
+                                                        <RadioButton fx:id="Glovo" mnemonicParsing="false"
+                                                                     onAction="#getSelectedRadio" text="Glovo"
+                                                                     toggleGroup="$Markets">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" top="10.0"/>
+                                                            </HBox.margin>
+                                                        </RadioButton>
+                                                        <RadioButton fx:id="Catering" mnemonicParsing="false"
+                                                                     onAction="#getSelectedRadio" text="Catering"
+                                                                     toggleGroup="$Markets">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" top="10.0"/>
+                                                            </HBox.margin>
+                                                        </RadioButton>
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label text="Price">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" top="15.0"/>
+                                                            </HBox.margin>
+                                                            <font>
+                                                                <Font size="14.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="price" text="0.00">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" top="15.0"/>
+                                                            </HBox.margin>
+                                                            <font>
+                                                                <Font size="15.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Label text="Commision">
+                                                            <font>
+                                                                <Font size="14.0"/>
+                                                            </font>
+                                                            <HBox.margin>
+                                                                <Insets left="40.0" top="15.0"/>
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <Label fx:id="commission" text="0%">
+                                                            <font>
+                                                                <Font size="14.0"/>
+                                                            </font>
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" top="15.0"/>
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <Label text="Returns">
+                                                            <HBox.margin>
+                                                                <Insets left="40.0" top="15.0"/>
+                                                            </HBox.margin>
+                                                            <font>
+                                                                <Font size="14.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="returns" text="0.00">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" top="15.0"/>
+                                                            </HBox.margin>
+                                                            <font>
+                                                                <Font size="14.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="VB" minHeight="0.0" minWidth="0.0" prefHeight="160.0"
+                                            prefWidth="100.0"/>
+                                <VBox prefHeight="67.0" prefWidth="295.0">
+                                    <children>
+                                        <HBox fx:id="HB" prefHeight="67.0" prefWidth="332.0" spacing="20.0">
+                                            <children>
+                                                <Label prefWidth="53.0" text="STATUS">
+                                                    <HBox.margin>
+                                                        <Insets left="180.0" top="45.0"/>
+                                                    </HBox.margin>
+                                                </Label>
+                                                <TextField prefHeight="26.0" prefWidth="201.0">
+                                                    <HBox.margin>
+                                                        <Insets top="40.0"/>
+                                                    </HBox.margin>
+                                                </TextField>
+                                            </children>
+                                            <padding>
+                                                <Insets left="110.0"/>
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </bottom>
+            <center>
+                <AnchorPane BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"
+                                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

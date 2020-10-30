@@ -1,0 +1,17 @@
+.root {
+    -fx-background-color: black;
+}
+
+.button {
+    -fx-background-color: red;
+}
+
+#HomeTop {
+    -fx-background-color: darkorange;
+    -fx-font-weight: bold;
+}
+
+.label {
+    -fx-text-fill: black;
+    -fx-font: italic;
+}

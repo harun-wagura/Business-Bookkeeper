@@ -1,0 +1,83 @@
+.root {
+    -fx-background-color: black;
+}
+
+.combo-box {
+    -fx-background-color: red;
+    -fx-text-fill: black;
+}
+
+.combo-box-base {
+    -fx-background-color: red;
+    -fx-text-fill: black;
+}
+
+.label {
+    -fx-text-fill: green;
+}
+
+.menu-bar {
+    -fx-background-color: red;
+}
+
+.check-box {
+    -fx-background-color: red;
+}
+
+.radio-button {
+    -fx-background-color: red;
+}
+
+.cell {
+    -fx-background-color: black;
+    -fx-text-fill: green;
+}
+
+.cell:selected {
+    -fx-background-color: black;
+}
+
+/*.cell:filled{*/
+/*    -fx-background-color: black;*/
+/*    -fx-text-fill: green;*/
+/*}*/
+.text-field {
+    -fx-background-color: black;
+    -fx-text-fill: green;
+}
+
+.list-view:even {
+    -fx-background-color: black;
+}
+
+.list-view:odd {
+    -fx-background-color: black;
+}
+
+.menu {
+    -fx-background-color: black;
+}
+
+.split-pane {
+    -fx-background-color: black;
+}
+
+.button {
+    -fx-background-color: red;
+}
+
+#vboxm, #vbox1, #hbox2 {
+    -fx-background-color: black;
+}
+
+#vbox4, #vbox3 {
+    -fx-background-color: black;
+}
+
+#hboxt {
+    -fx-background-color: black;
+}
+
+#Database:filled {
+    -fx-background-color: snow;
+}

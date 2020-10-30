@@ -1,0 +1,23 @@
+.root {
+    -fx-background-color: black;
+}
+
+.text-field {
+    -fx-text-fill: green;
+}
+
+.label {
+    -fx-text-fill: green;
+}
+
+.button {
+    -fx-background-color: red;
+}
+
+.combo-box {
+    -fx-background-color: #FFC300;
+}
+
+.combo-box-base {
+    -fx-background-color: #FFC300;
+}

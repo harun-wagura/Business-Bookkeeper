@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1"
+            fx:controller="Operations.ViewController">
+   <children>
+      <BorderPane>
+         <top>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <HBox spacing="50.0">
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="95.0" text="Name">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0"/>
+                           </HBox.margin>
+                           <font>
+                              <Font size="17.0"/>
+                           </font>
+                        </Label>
+                        <Label fx:id="itemName" prefHeight="26.0" prefWidth="366.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" top="10.0"/>
+                           </HBox.margin>
+                           <font>
+                              <Font size="17.0"/>
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox spacing="50.0">
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="95.0" text="Price">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0"/>
+                           </HBox.margin>
+                           <font>
+                              <Font size="17.0"/>
+                           </font>
+                        </Label>
+                        <Label fx:id="price" prefHeight="26.0" prefWidth="87.0">
+                           <HBox.margin>
+                              <Insets bottom="10.0" top="10.0"/>
+                           </HBox.margin>
+                           <font>
+                              <Font size="17.0"/>
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0"/>
+                     </VBox.margin>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="INGREDIENTS">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="250.0" top="10.0"/>
+                           </HBox.margin>
+                           <font>
+                              <Font size="17.0"/>
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox spacing="130.0">
+                     <children>
+                        <Label text="NAME">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="50.0" top="10.0"/>
+                           </HBox.margin>
+                           <font>
+                              <Font size="15.0"/>
+                           </font>
+                        </Label>
+                        <Label text="QUANTITY(grams)">
+                           <font>
+                              <Font size="15.0"/>
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" top="10.0"/>
+                           </HBox.margin>
+                        </Label>
+                        <Label text="COST">
+                           <font>
+                              <Font size="15.0"/>
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" top="10.0"/>
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="407.0" prefWidth="597.0" spacing="30.0">
+                     <children>
+                        <ListView fx:id="names" prefHeight="350.0" prefWidth="225.0"/>
+                        <ListView fx:id="quantities" prefHeight="350.0" prefWidth="146.0"/>
+                        <ListView fx:id="costs" prefHeight="350.0" prefWidth="146.0"/>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="135.0"/>
+               </BorderPane.margin>
+            </VBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

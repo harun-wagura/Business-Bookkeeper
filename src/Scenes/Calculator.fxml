@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            fx:controller="Calc.Controller">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+            AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="51.0" prefWidth="600.0">
+               <children>
+                  <ComboBox fx:id="Units" onAction="#setUnits" prefWidth="150.0" promptText="Units">
+                     <HBox.margin>
+                        <Insets left="250.0" top="20.0"/>
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="123.0" text="Known Measure">
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0"/>
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="KMeasure" prefHeight="26.0" prefWidth="76.0">
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0"/>
+                     </HBox.margin>
+                  </TextField>
+                  <Label prefHeight="27.0" prefWidth="107.0" text="Known Cost">
+                     <HBox.margin>
+                        <Insets left="50.0" top="20.0"/>
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="KPrice" prefHeight="26.0" prefWidth="91.0">
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0"/>
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0"/>
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="123.0" text="Desired Measure">
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0"/>
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="DMeasure" prefHeight="26.0" prefWidth="76.0">
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0"/>
+                     </HBox.margin>
+                  </TextField>
+                  <Label prefHeight="27.0" prefWidth="117.0" text=" Calculated Cost">
+                     <HBox.margin>
+                        <Insets left="50.0" top="20.0"/>
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="Calculated_Price" prefHeight="27.0" prefWidth="107.0">
+                     <HBox.margin>
+                        <Insets left="30.0" top="20.0"/>
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="ExitButton" mnemonicParsing="false" onAction="#exit" text="Exit">
+                     <HBox.margin>
+                        <Insets left="400.0" top="30.0"/>
+                     </HBox.margin>
+                     <font>
+                        <Font size="11.0"/>
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#Calculate" text="Calculate">
+                     <HBox.margin>
+                        <Insets left="30.0" top="30.0"/>
+                     </HBox.margin>
+                     <font>
+                        <Font size="11.0"/>
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

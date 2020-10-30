@@ -1,0 +1,78 @@
+
+.root {
+    -fx-background-color: #FFC300;
+    -fx-background-image: url("/images/WALLPAPER.jpg");
+    -fx-font-family: Consolas;
+}
+
+
+#home, #anchorPane1, #anchorPane2 {
+    -fx-font-family: Consolas;
+    -fx-background-color: #FFC300;
+
+}
+
+.menu-bar {
+    -fx-font-family: Consolas;
+    -fx-background-color: #FFC300;
+    -fx-font-weight: bold;
+}
+
+.label {
+    -fx-font-family: Consolas;
+    -fx-background-color: #FFC300;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.button {
+    -fx-font-family: Consolas;
+    -fx-background-color: #FFC300;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+.list-view .list-cell:even {
+    -fx-font-family: Consolas;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+
+}
+
+.list-view .list-cell:selected {
+    -fx-background-color: #FFC300;
+}
+
+
+.list-view .list-cell:odd {
+    -fx-font-family: Consolas;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+.text-area {
+    -fx-font-family: Consolas;
+    -fx-font-size: 15;
+    -fx-text-fill: black;
+    -fx-display-caret: true;
+}
+
+.text-area .content {
+    -fx-background-color: white;
+}
+
+.combo-box {
+    -fx-background-color: #FFC300;
+}
+
+.combo-box-base {
+    -fx-background-color: #FFC300;
+}

@@ -1,0 +1,23 @@
+/*.text-field{*/
+/*    -fx-background-color: black;*/
+/*    -fx-text-fill: white;*/
+/*}*/
+/*.root{*/
+/*    -fx-background-color: black;*/
+/*}*/
+/*.label{*/
+/*    -fx-background-color: black;*/
+/*    -fx-text-fill: red;*/
+/*}*/
+/*.text-area .content{*/
+/*    -fx-background-color: black;*/
+/*    -fx-text-fill: white;*/
+/*}*/
+/*.text-field:default {*/
+/*    -fx-text-box-border: red ;*/
+/*    -fx-focus-color: red ;*/
+/*}*/
+/*.text-area:default {*/
+/*    -fx-text-box-border: red ;*/
+/*    -fx-focus-color: red ;*/
+/*}*/
